@@ -40,7 +40,8 @@ module.exports = {
         'white':'#fff',
         'serviceTextColor':'#777',
         'footerGrayColor':'#f5f5f5',
-        'footerCustomFontColor':'#707070'
+        'footerCustomFontColor':'#707070',
+        'color-basketGrayColor':'#ebeded'
       }
   },
   plugins: [],

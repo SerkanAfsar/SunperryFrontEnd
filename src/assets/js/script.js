@@ -7,6 +7,31 @@ const $newProductsNavbar=document.querySelector('.last-new-products-navbar');
 const $mostSoldControl=document.querySelector('.most-sold-control');
 const $mostSoldControlNavbar=document.querySelector('.most-sold-contol-navbar');
 const footerTopItems=document.querySelectorAll('#footer-top-control h4');
+const $basket=document.querySelector(".basket");
+const $basketDiv=document.querySelector(".basketDiv");
+const $menuList=document.querySelector('.menuList');
+const $iconMenu=document.querySelector('.iconMenu');
+const $iconBasketCancel=document.querySelector(".iconBasketCancel");
+
+if($iconMenu && $menuList){
+  $iconMenu.addEventListener("click",()=>{
+    $menuList.classList.toggle("flex");
+    $menuList.classList.toggle("hidden");
+  })
+}
+
+if($basket){
+  $basket.addEventListener("click",()=>{
+    $basketDiv.classList.toggle("hidden");
+    $basketDiv.classList.toggle("block");
+  })
+}
+if($iconBasketCancel){
+  $iconBasketCancel.addEventListener("click",()=>{
+    $basketDiv.classList.toggle("hidden");
+    $basketDiv.classList.toggle("block");
+  })
+}
 
 footerTopItems.forEach((item) => {
   item.addEventListener("click",()=>{

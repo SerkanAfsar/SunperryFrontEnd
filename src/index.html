@@ -14,7 +14,7 @@
 	<body class="bg-white">
 		<header>
 			<div class="container mx-auto">
-				<div class="py-3 flex align-middle md:justify-between md:flex-row flex-col gap-2 items-center">
+				<div class="py-3 hidden md:flex align-middle md:justify-between md:flex-row flex-col gap-2 items-center">
 					<div class="text-customFontColor font-JostRegular text-sm text-center md:text-md">
 						<i class="icon-box mr-2 text-xl"></i>
 						TÜM SİPARİŞLERİNİZDE ÜCRETSİZ KARGO FIRSATI
@@ -24,29 +24,86 @@
 						<span>0850 850 85 85</span>
 					</div>
 				</div>
-				<div class="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between">
-					<div class="relative w-full md:w-auto lg:w-[230px]">
+				<div class="flex flex-row gap-4 my-3 md:mt-0 md:gap-0 items-center justify-between">
+					<i class="inline-block md:!hidden icon-cancel iconMenu text-xl"></i>
+					<div class="hidden md:block relative w-full md:w-auto lg:w-[230px]">
 						<input type="text" class="border-solid w-full  pr-6 md:pr-10 border-b border-searchColor py-2 text-xs focus:outline-none" placeholder="Aramak İstediğiniz Ürünü Yazınız..." />
 						<button class="absolute right-0 top-[5px]" type="button">
 							<i class="icon-search text-xl text-searchColor"></i>
 						</button>
 					</div>
-					<div class="font-JostMedium text-5xl tracking-widest text-customFontColor:">SUNPERRY</div>
-					<div class="flex gap-4 text-3xl text-customFontColor items-center justify-center  md:justify-end  w-full md:w-auto lg:w-[230px]">
+					<div class="hidden md:block font-JostMedium text-5xl tracking-widest text-customFontColor:">SUNPERRY</div>
+					<div class="relative flex gap-4 text-3xl text-customFontColor items-center justify-end  md:justify-end  w-full md:w-auto lg:w-[230px]">
 						<i class="icon-heart text-2xl"></i>
 						<i class="icon-person"></i>
-						<i class="icon-add"></i>
+						<i class="icon-add basket text-3xl hover:cursor-pointer"></i>
+						<div class="basketDiv absolute md:min-w-[300px] bg-white hidden w-full right-0 top-10 md:top-12 z-10">
+							<div class="relative flex justify-between items-center">
+								<div class="inset-0 px-10 py-5 flex justify-center items-center w-full bg-color-basketGrayColor capitalize text-customFontColor relative font-JostRegular text-lg">
+									Alışveriş Sepeti(1)
+								</div>
+								<div class="absolute w-10 h-full text-base flex justify-center bg-color-basketGrayColor items-center right-0 top-0">
+									<icon class="icon-cancel iconBasketCancel hover:cursor-pointer"></icon>
+								</div>
+							</div>
+							<div class="h-[150px] p-3"></div>
+							<div class="p-3">
+								<hr />
+								<div class="flex justify-between items-center mt-3 text-customFontColor text-sm">
+									<span class="font-JostRegular">GENEL TOPLAM</span>
+									<b class="font-JostBold">1,245.0000 TL</b>
+								</div>
+								<a href="#" class="bg-customFontColor mt-3 p-2 w-full block text-center text-sm text-white font-JostRegular capitalize">
+									Sepete Git
+								</a>
+								<a href="#" class="bg-white border border-solid border-customFontColor mt-3 p-2 w-full block text-center text-sm text-customFontColor font-JostRegular capitalize">
+									Alışverişe Devam Et
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="py-2 my-2 w-full flex flex-col md:flex-row justify-center gap-[20px] items-center font-medium text-customFontColor font-JostRegular">
-					<a href="#">TAYT</a>
-					<a href="#">CROP</a>
-					<a href="#">T-SHIRT</a>
-					<a href="#">ŞAPKA</a>
-					<a href="#">TOKA</a>
-					<a href="#">EŞOFMAN</a>
-					<a href="#">SWEAT-SHIRT</a>
-					<a href="#">AKSESUAR</a>
+				<div class="hidden md:block py-2 my-2 w-full menuList items-center font-medium text-customFontColor font-JostRegular">
+					<ul class="flex w-full text-sm md:text-base flex-col md:flex-row gap-[20px] justify-center">
+						<li><a href="#">TAYT</a></li>
+						<li><a href="#">CROP</a></li>
+						<li class="relative group"><a href="#">T-SHIRT <i class="icon-down-arrow font-bold"></i></a>
+							<div class="w-[200px] md:min-h-[200px] min-h-0 hidden flex-col group-hover:block group-hover:md:flex group-hover:md:absolute justify-between items-center px-2 py-3 md:px-4 md:py-5 left-0 top-[100%] z-30 bg-white">
+								<ul class="w-full list-none flex gap-2 flex-col justify-start items-start">
+									<li><a href="#">Eşofman Altı</a></li>
+									<li><a href="#">Eşofman Üstü</a></li>
+									<li><a href="#">Eşofman Takımı</a></li>
+								</ul>
+								<div class="w-full flex flex-col gap-2 mt-2 md:mt-0">
+									<hr class="hidden md:block" />
+									<div class="flex justify-between items-center">
+										<a href="#">Tümünü Gör</a>
+										<i class="!hidden md:!inline-block icon-right-arrow-2 text-2xl"></i>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">TOKA</a></li>
+						<li><a href="#">EŞOFMAN</a></li>
+						<li class="relative group">
+							<a href="#">SWEAT-SHIRT <i class="icon-down-arrow font-bold"></i></a>
+							<div class="w-[200px] md:min-h-[200px] min-h-0 hidden flex-col group-hover:block group-hover:md:flex group-hover:md:absolute justify-between items-center px-4 py-5 left-0 top-[100%] z-30 bg-white">
+								<ul class="w-full list-none flex gap-2 flex-col justify-start items-start">
+									<li><a href="#">Eşofman Altı</a></li>
+									<li><a href="#">Eşofman Üstü</a></li>
+									<li><a href="#">Eşofman Takımı</a></li>
+								</ul>
+								<div class="w-full flex flex-col gap-2 mt-2 md:mt-0">
+									<hr class="hidden md:block" />
+									<div class="flex justify-between items-center">
+										<a href="#">Tümünü Gör</a>
+										<i class="!hidden md:!inline-block icon-right-arrow-2 text-2xl"></i>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">AKSESUAR</a></li>
+					</ul>
 				</div>
 			</div>
 		</header>
